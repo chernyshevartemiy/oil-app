@@ -9,16 +9,33 @@
 }
 
 :root {
-  --family: 'Raleway', sans-serif;;
+  --family: 'Raleway', sans-serif;
   --fs-sm: 14px;
   --fs-md: 16px;
   --fw-light: 300;
   --fw-normal: 600;
   --fw-bold: 800;
-  --radius: 0.5rem;
+  --radius: 2px;
+  --text-color: #282828;
+  --hover-text-color: #fce744;
+  --btn-color: #ff6900;
 }
 
 body {
   font-family: var(--family);
   font-weight: var(--fw-normal);
+  font-size: var(--fs-sm);
+  color: var(--text-color);
+}
+
+#background-video {
+  width: 100vw;
+  height: 100vh;
+  object-fit: cover;
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  z-index: -1;
 }
