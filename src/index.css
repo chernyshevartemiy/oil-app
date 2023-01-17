@@ -17,8 +17,9 @@
   --fw-bold: 800;
   --radius: 2px;
   --text-color: #282828;
-  --hover-text-color: #fce744;
-  --btn-color: #ff6900;
+  --bg-color-hover: #e3b609;
+  --hover-text-color: #f4c40a;
+  --bg-color: #f4c40a;
 }
 
 body {
