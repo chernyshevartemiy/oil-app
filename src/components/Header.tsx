@@ -1,11 +1,11 @@
 import React from 'react';
 import styled from 'styled-components';
-import icon from '../assets/images/Icon.svg';
+import icon from '../assets/images/Icon.png';
 import { Button } from './Button';
 import { HiMenuAlt1 } from 'react-icons/hi';
+import { Menu } from './Menu';
 
 const Wrapper = styled.div`
-  width: 100%;
   font-size: var(--fs-sm);
 `;
 
@@ -50,10 +50,7 @@ const Navigation = styled.nav`
 const List = styled.ul`
   list-style: none;
   display: flex;
-  column-gap: 1.5rem;
-  @media (min-width: 768px) {
-    column-gap: 2rem;
-  }
+  column-gap: 2rem;
 `;
 
 const ListItem = styled.li`
@@ -65,12 +62,14 @@ const ListItem = styled.li`
   }
 `;
 
-export const Header = () => {
+export const Header: React.FC = () => {
+  const [menu, setMenu] = React.useState<boolean>(false);
   return (
     <Wrapper>
+      <Menu menu={menu} setMenu={setMenu} />
       <HeaderEl>
-        <BurgerIcon>
-          <HiMenuAlt1 size={25} />
+        <BurgerIcon onClick={() => setMenu(!menu)}>
+          <HiMenuAlt1 style={{ cursor: 'pointer' }} size={25} />
           <BurgerText>Меню</BurgerText>
         </BurgerIcon>
         <Logo src={icon} />
