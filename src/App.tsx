@@ -1,21 +1,21 @@
-import React from 'react';
-import { Header } from './components/Header';
-import styled from 'styled-components';
-import { Container } from './components/Containter';
-import { Menu } from './components/Menu';
+import { Route, Routes } from 'react-router-dom';
+import { Main } from './pages/Main';
+import { Job } from './pages/Job';
+import { Services } from './pages/Services';
+import { Contact } from './pages/Contact';
+import { Layout } from './components/Layout';
 
-const Wrapper = styled.div`
-  width: 100%;
-`;
-
-function App() {
+const App = () => {
   return (
-    <Wrapper>
-      <Container>
-        <Header />
-      </Container>
-    </Wrapper>
+    <Routes>
+      <Route element={<Layout />}>
+        <Route path='/' element={<Main />} />
+        <Route path='job' element={<Job />} />
+        <Route path='services' element={<Services />} />
+        <Route path='contact' element={<Contact />} />
+      </Route>
+    </Routes>
   );
-}
+};
 
 export default App;

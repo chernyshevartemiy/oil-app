@@ -4,6 +4,7 @@ import icon from '../assets/images/Icon.png';
 import { Button } from './Button';
 import { HiMenuAlt1 } from 'react-icons/hi';
 import { Menu } from './Menu';
+import { Link } from 'react-router-dom';
 
 const Wrapper = styled.div`
   font-size: var(--fs-sm);
@@ -56,9 +57,12 @@ const List = styled.ul`
 const ListItem = styled.li`
   display: inline;
   font-weight: var(--fw-bold);
-  cursor: pointer; // Remove it later
-  &:hover {
-    color: var(--hover-text-color);
+  a {
+    text-decoration: none;
+    color: var(--text-color);
+    &:hover {
+      color: var(--hover-text-color);
+    }
   }
 `;
 
@@ -75,10 +79,18 @@ export const Header: React.FC = () => {
         <Logo src={icon} />
         <Navigation>
           <List>
-            <ListItem>О компании</ListItem>
-            <ListItem>Деятельность</ListItem>
-            <ListItem>Услуги</ListItem>
-            <ListItem>Контакты</ListItem>
+            <ListItem>
+              <Link to='/'>О компании</Link>
+            </ListItem>
+            <ListItem>
+              <Link to='job'>Деятельность</Link>
+            </ListItem>
+            <ListItem>
+              <Link to='services'>Услуги</Link>
+            </ListItem>
+            <ListItem>
+              <Link to='contact'>Контакты</Link>
+            </ListItem>
           </List>
         </Navigation>
         <Button>Связаться</Button>

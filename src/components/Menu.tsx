@@ -2,6 +2,8 @@ import React from 'react';
 import styled from 'styled-components';
 import icon from '../assets/images/Icon.png';
 import { IoCloseSharp } from 'react-icons/io5';
+import { Link } from 'react-router-dom';
+import { List } from './List';
 
 type IStyledMenu = {
   menu: boolean;
@@ -10,7 +12,6 @@ type IStyledMenu = {
 const Wrapper = styled.div<IStyledMenu>`
   display: block;
   position: fixed;
-  width: 100vw;
   top: 0;
   left: 0;
   color: var(--text-color);
@@ -56,15 +57,6 @@ const Logo = styled.img`
   height: 30px;
 `;
 
-const List = styled.ul`
-  list-style: none;
-`;
-
-const ListItem = styled.li`
-  padding: 20px 0;
-  border-bottom: 1px solid #e0e0e0;
-`;
-
 type IMenu = {
   menu: boolean;
   setMenu: React.Dispatch<React.SetStateAction<boolean>>;
@@ -74,7 +66,7 @@ export const Menu: React.FC<IMenu> = ({ menu, setMenu }) => {
   console.log(menu);
   return (
     <>
-      {menu && <Blur />}
+      {menu && <Blur onClick={() => setMenu(!menu)} />}
       <Wrapper menu={menu}>
         <Content>
           <Header>
@@ -85,12 +77,7 @@ export const Menu: React.FC<IMenu> = ({ menu, setMenu }) => {
               onClick={() => setMenu(!menu)}
             />
           </Header>
-          <List>
-            <ListItem>О компании</ListItem>
-            <ListItem>Деятельность</ListItem>
-            <ListItem>Услуги</ListItem>
-            <ListItem>Контакты</ListItem>
-          </List>
+          <List setMenu={setMenu} menu={menu}/>
         </Content>
       </Wrapper>
     </>
