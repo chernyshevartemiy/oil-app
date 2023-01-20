@@ -7,7 +7,7 @@ const Wrapper = styled.div`
   width: 100%;
 `;
 
-export const Layout = () => {
+export const Layout:React.FC = () => {
   return (
     <Wrapper>
       <Container>

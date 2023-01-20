@@ -18,8 +18,9 @@
   --radius: 2px;
   --text-color: #282828;
   --bg-color: #f4c40a;
-  --bg-color-hover: #e3b609;
+  --selected-color: #f4c40a;
   --hover-text-color: #f4c40a;
+  --bg-color-hover: #e3b609;
 }
 
 body {

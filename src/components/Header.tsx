@@ -4,7 +4,8 @@ import icon from '../assets/images/Icon.png';
 import { Button } from './Button';
 import { HiMenuAlt1 } from 'react-icons/hi';
 import { Menu } from './Menu';
-import { Link } from 'react-router-dom';
+import { listItems } from './List';
+import { CustomLink } from './CustomLink';
 
 const Wrapper = styled.div`
   font-size: var(--fs-sm);
@@ -54,18 +55,6 @@ const List = styled.ul`
   column-gap: 2rem;
 `;
 
-const ListItem = styled.li`
-  display: inline;
-  font-weight: var(--fw-bold);
-  a {
-    text-decoration: none;
-    color: var(--text-color);
-    &:hover {
-      color: var(--hover-text-color);
-    }
-  }
-`;
-
 export const Header: React.FC = () => {
   const [menu, setMenu] = React.useState<boolean>(false);
   return (
@@ -79,18 +68,11 @@ export const Header: React.FC = () => {
         <Logo src={icon} />
         <Navigation>
           <List>
-            <ListItem>
-              <Link to='/'>О компании</Link>
-            </ListItem>
-            <ListItem>
-              <Link to='job'>Деятельность</Link>
-            </ListItem>
-            <ListItem>
-              <Link to='services'>Услуги</Link>
-            </ListItem>
-            <ListItem>
-              <Link to='contact'>Контакты</Link>
-            </ListItem>
+            {listItems.map((item) => {
+              return (
+                <CustomLink key={item.name} to={item.to} name={item.name} />
+              );
+            })}
           </List>
         </Navigation>
         <Button>Связаться</Button>

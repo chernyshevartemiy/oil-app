@@ -18,7 +18,7 @@ const Wrapper = styled.div<IStyledMenu>`
   font-weight: var(--fw-normal);
   font-size: var(--fs-sm);
   transform: ${({ menu }) => (menu ? 'translate(0)' : 'translateX(-100%)')};
-  transition: all 0.3s;
+  transition: all 0.4s;
   @media (min-width: 768px) {
     display: none;
   }
@@ -63,7 +63,6 @@ type IMenu = {
 };
 
 export const Menu: React.FC<IMenu> = ({ menu, setMenu }) => {
-  console.log(menu);
   return (
     <>
       {menu && <Blur onClick={() => setMenu(!menu)} />}
@@ -77,7 +76,7 @@ export const Menu: React.FC<IMenu> = ({ menu, setMenu }) => {
               onClick={() => setMenu(!menu)}
             />
           </Header>
-          <List setMenu={setMenu} menu={menu}/>
+          <List setMenu={setMenu} menu={menu} />
         </Content>
       </Wrapper>
     </>

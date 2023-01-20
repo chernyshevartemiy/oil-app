@@ -1,6 +1,6 @@
 import React from 'react'
 
-export const Services = () => {
+export const Services:React.FC = () => {
   return (
     <div>Services</div>
   )

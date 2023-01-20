@@ -5,7 +5,7 @@ const ListEl = styled.ul`
   list-style: none;
 `;
 
-const listItems = [
+export const listItems = [
   { to: '/', name: 'О компании' },
   { to: 'job', name: 'Деятельность' },
   { to: 'services', name: 'Услуги' },
@@ -23,6 +23,7 @@ export const List: React.FC<IList> = ({ menu, setMenu }) => {
       {listItems.map((item) => {
         return (
           <ListItem
+            key={item.name}
             onMenu={() => setMenu(!menu)}
             to={item.to}
             name={item.name}

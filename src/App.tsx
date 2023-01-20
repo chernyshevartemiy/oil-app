@@ -5,7 +5,7 @@ import { Services } from './pages/Services';
 import { Contact } from './pages/Contact';
 import { Layout } from './components/Layout';
 
-const App = () => {
+const App:React.FC = () => {
   return (
     <Routes>
       <Route element={<Layout />}>
