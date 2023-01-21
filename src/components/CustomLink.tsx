@@ -8,7 +8,7 @@ type IStyledListItem = {
 
 const ListItem = styled.li<IStyledListItem>`
   display: inline;
-  font-weight: var(--fw-bold);
+  font-weight: var(--fw-normal);
   a {
     text-decoration: none;
     color: ${({ match }) =>

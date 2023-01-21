@@ -30,7 +30,7 @@ type IListItem = {
 export const ListItem: React.FC<IListItem> = ({ to, name, onMenu }) => {
   const match = useMatch(to);
   return (
-    <ListItemEl match={match ? match : null}>
+    <ListItemEl match={match}>
       <Link onClick={onMenu} to={to}>
         {name}
       </Link>

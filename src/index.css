@@ -11,16 +11,18 @@
 :root {
   --family: 'Raleway', sans-serif;
   --fs-sm: 14px;
-  --fs-md: 16px;
+  --fs-md: 15px;
   --fw-light: 300;
+  --fw-medium: 500;
   --fw-normal: 600;
   --fw-bold: 800;
-  --radius: 2px;
+  --radius: 3px;
   --text-color: #282828;
-  --bg-color: #f4c40a;
-  --selected-color: #f4c40a;
+  --text-color-white: #ffffff;
+  --bg-color: rgba(244, 181, 12, 1);
+  --selected-color: rgba(244, 181, 12, 1);
   --hover-text-color: #f4c40a;
-  --bg-color-hover: #e3b609;
+  --bg-color-hover: rgba(49, 50, 51, 1);
 }
 
 body {
@@ -40,4 +42,14 @@ body {
   top: 0;
   bottom: 0;
   z-index: -1;
+}
+
+.icon {
+  color: var(--selected-color);
+  transition: all 0.1s;
+}
+
+.icon:hover {
+  color: var(--bg-color-hover);
+  transition: all 0.1s;
 }

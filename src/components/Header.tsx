@@ -6,22 +6,30 @@ import { HiMenuAlt1 } from 'react-icons/hi';
 import { Menu } from './Menu';
 import { listItems } from './List';
 import { CustomLink } from './CustomLink';
+import { Container } from './Containter';
+import { HeaderInfo } from './HeaderInfo';
 
 const Wrapper = styled.div`
-  font-size: var(--fs-sm);
+  width: 100%;
 `;
 
 const HeaderEl = styled.header`
   display: flex;
   padding: 1rem 0;
   align-items: center;
+  font-size: var(--fs-md);
   justify-content: space-between;
+  @media (min-width: 1024px) {
+    padding: 1rem 0;
+  }
 `;
 
 const Logo = styled.img`
   height: 35px;
-  @media (min-width: 768px) {
+  margin-right: 0px;
+  @media (min-width: 1024px) {
     height: 40px;
+    margin-right: 40px;
   }
 `;
 
@@ -30,7 +38,7 @@ const BurgerIcon = styled.div`
   align-items: center;
   text-align: center;
   cursor: pointer;
-  @media (min-width: 768px) {
+  @media (min-width: 1024px) {
     display: none;
   }
 `;
@@ -42,9 +50,9 @@ const BurgerText = styled.span`
 
 const Navigation = styled.nav`
   display: none;
-  column-gap: 4rem;
+  column-gap: 3rem;
   align-items: center;
-  @media (min-width: 768px) {
+  @media (min-width: 1024px) {
     display: flex;
   }
 `;
@@ -60,23 +68,26 @@ export const Header: React.FC = () => {
   return (
     <Wrapper>
       <Menu menu={menu} setMenu={setMenu} />
-      <HeaderEl>
-        <BurgerIcon onClick={() => setMenu(!menu)}>
-          <HiMenuAlt1 style={{ cursor: 'pointer' }} size={25} />
-          <BurgerText>Меню</BurgerText>
-        </BurgerIcon>
-        <Logo src={icon} />
-        <Navigation>
-          <List>
-            {listItems.map((item) => {
-              return (
-                <CustomLink key={item.name} to={item.to} name={item.name} />
-              );
-            })}
-          </List>
-        </Navigation>
-        <Button>Связаться</Button>
-      </HeaderEl>
+      <HeaderInfo />
+      <Container>
+        <HeaderEl>
+          <BurgerIcon onClick={() => setMenu(!menu)}>
+            <HiMenuAlt1 style={{ cursor: 'pointer' }} size={25} />
+            <BurgerText>Меню</BurgerText>
+          </BurgerIcon>
+          <Logo src={icon} />
+          <Navigation>
+            <List>
+              {listItems.map((item) => {
+                return (
+                  <CustomLink key={item.name} to={item.to} name={item.name} />
+                );
+              })}
+            </List>
+          </Navigation>
+          <Button>Связаться</Button>
+        </HeaderEl>
+      </Container>
     </Wrapper>
   );
 };
