@@ -12,6 +12,7 @@ const Wrapper = styled.div<IWrapper>`
   height: 700px;
   background-image: url(${({ img }) => img});
   background-repeat: no-repeat;
+  background-position: center;
   background-size: cover;
   align-items: center;
   color: #ffffff;

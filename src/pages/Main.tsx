@@ -21,13 +21,12 @@ export const Main: React.FC = () => {
           spaceBetween={0}
           pagination={{
             type: 'progressbar',
-            dynamicBullets: true,
           }}
           autoplay={{
             delay: 7500,
             disableOnInteraction: false,
           }}
-          modules={[Autoplay, Navigation, Pagination]}
+          modules={[Autoplay, Pagination]}
           className='mySwiper'
         >
           <SwiperSlide>
