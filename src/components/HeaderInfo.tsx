@@ -3,9 +3,6 @@ import { Container } from './Containter';
 import { LocationInfo } from './LocationInfo';
 import { MailInfo } from './MailInfo';
 import { TimeInfo } from './TimeInfo';
-import { BsTelegram } from 'react-icons/bs';
-import { BiPhone } from 'react-icons/bi';
-import { FaTelegramPlane } from 'react-icons/fa';
 import { Phone } from './Phone';
 import { Telegram } from './Telegram';
 

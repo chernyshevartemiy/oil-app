@@ -16,6 +16,7 @@ type IStyledMenu = {
 const Wrapper = styled.div<IStyledMenu>`
   display: block;
   position: fixed;
+  z-index: 10;
   top: 0;
   left: 0;
   color: var(--text-color);
@@ -32,6 +33,7 @@ const Blur = styled.div`
   width: 100vw;
   height: 100vh;
   position: fixed;
+  z-index: 9;
   top: 0;
   left: 0;
   backdrop-filter: brightness(30%);

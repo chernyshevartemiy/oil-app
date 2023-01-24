@@ -1,5 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Raleway:wght@300;400;500;600;700&display=swap');
-
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Rubik:wght@400;500;600;700;800&display=swap');
 *::after,
 *::before,
 * {
@@ -9,7 +10,9 @@
 }
 
 :root {
-  --family: 'Raleway', sans-serif;
+  --main-family: 'Raleway', sans-serif;
+  --inter-family: 'Inter', sans-serif;
+  --rubik-family: 'Rubik', sans-serif;
   --fs-sm: 14px;
   --fs-md: 15px;
   --fw-light: 300;
@@ -26,7 +29,7 @@
 }
 
 body {
-  font-family: var(--family);
+  font-family: var(--main-family);
   font-weight: var(--fw-normal);
   font-size: var(--fs-sm);
   color: var(--text-color);
@@ -52,4 +55,8 @@ body {
 .icon:hover {
   color: var(--bg-color-hover);
   transition: all 0.1s;
+}
+
+.swiper-pagination-progressbar-fill {
+  border: 2px solid var(--bg-color);
 }
