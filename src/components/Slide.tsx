@@ -9,12 +9,16 @@ type IWrapper = {
 const Wrapper = styled.div<IWrapper>`
   display: flex;
   align-items: center;
-  height: 700px;
-  background-image: url(${({ img }) => img});
+  height: 650px;
+  background: linear-gradient(
+      90deg,
+      rgba(0, 0, 0, 0.4) 30%,
+      rgba(0, 0, 0, 0) 100%
+    ),
+    url(${({ img }) => img});
   background-repeat: no-repeat;
-  background-position: center;
+  background-position: center center;
   background-size: cover;
-  align-items: center;
   color: #ffffff;
   font-family: var(--inter-family);
 `;
@@ -26,7 +30,7 @@ const Content = styled.div`
 
 const Title = styled.span`
   font-size: 48px;
-  max-width: 550px;
+  max-width: 600px;
   font-weight: var(--fw-bold);
   padding-bottom: 30px;
   @media (min-width: 1024px) {
@@ -36,7 +40,7 @@ const Title = styled.span`
 
 const Subtitle = styled.span`
   font-size: 18px;
-  max-width: 552px;
+  max-width: 520px;
   padding-bottom: 25px;
 `;
 

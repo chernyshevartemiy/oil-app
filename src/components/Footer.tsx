@@ -24,7 +24,6 @@ const Main = styled.div`
   flex-direction: column;
 `;
 
-
 const Contact = styled.div`
   display: flex;
   flex-direction: column;
@@ -48,6 +47,7 @@ const Title = styled.span`
   font-size: 26px;
   margin-top: 40px;
   @media (min-width: 1024px) {
+    height: 50px;
     margin-top: 0;
   }
 `;
@@ -71,6 +71,10 @@ const SelectedText = styled.span`
   }
 `;
 
+const MailText = styled(SelectedText)`
+  margin-top: 0px;
+`;
+
 export const Footer = () => {
   return (
     <FooterEl>
@@ -87,7 +91,7 @@ export const Footer = () => {
             <Subtitle>Факс:</Subtitle>
             <Text>+7 (3412) 908-627 (доб. 909)</Text>
             <Subtitle>E-mail:</Subtitle>
-            <SelectedText>info@udsoil.ru</SelectedText>
+            <MailText>info@udsoil.ru</MailText>
           </Contact>
           <Schedule>
             <Title>Режим работы</Title>

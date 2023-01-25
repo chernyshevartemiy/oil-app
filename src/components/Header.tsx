@@ -8,6 +8,7 @@ import { listItems } from './List';
 import { CustomLink } from './CustomLink';
 import { Container } from './Containter';
 import { HeaderInfo } from './HeaderInfo';
+import { Link } from 'react-router-dom';
 
 const Wrapper = styled.div`
   width: 100%;
@@ -85,7 +86,17 @@ export const Header: React.FC = () => {
               })}
             </List>
           </Navigation>
-          <Button>Связаться</Button>
+          <Button>
+            <Link
+              style={{
+                textDecoration: 'none',
+                color: 'var(--text-color-white)',
+              }}
+              to='contact'
+            >
+              Связаться
+            </Link>
+          </Button>
         </HeaderEl>
       </Container>
     </Wrapper>
