@@ -1,24 +1,43 @@
 import styled from 'styled-components';
 import { Container } from '../components/Containter';
+import errorImg from '../assets/images/Error.jpg';
 
 const Wrapper = styled.div`
-  width: 100%;
-  margin-top: 20px;
+  display: flex;
+  align-items: center;
+  height: 650px;
+  background: linear-gradient(
+      90deg,
+      rgba(0, 0, 0, 0.7) 0%,
+      rgba(0, 0, 0, 0) 64%
+    ),
+    url(${errorImg});
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+  font-family: var(--inter-family);
+  border-top: 4px solid var(--bg-color);
+  color: var(--text-color-white);
+`;
+
+const Title = styled.div`
+  padding-bottom: 30px;
+  max-width: 600px;
+  font-size: 48px;
+  font-weight: var(--fw-bold);
+  @media (min-width: 1024px) {
+    font-size: 60px;
+  }
+`;
+
+const Subtitle = styled.div`
+  font-size: 18px;
+  max-width: 550px;
 `;
 
 const ErrorEl = styled.div`
   display: flex;
   flex-direction: column;
-  align-items: center;
-`;
-
-const Number = styled.span`
-  margin-bottom: 15px;
-  font-size: 30px;
-`;
-
-const Title = styled.span`
-  font-size: 20px;
 `;
 
 export const Error = () => {
@@ -26,8 +45,8 @@ export const Error = () => {
     <Wrapper>
       <Container>
         <ErrorEl>
-          <Number>Ошибка #404</Number>
-          <Title>Извините, страница была не найдена.</Title>
+          <Title>Ошибка #404</Title>
+          <Subtitle>Извините, страница была не найдена.</Subtitle>
         </ErrorEl>
       </Container>
     </Wrapper>

@@ -6,7 +6,7 @@ import Serv from '../assets/images/Services.jpg';
 const Wrapper = styled.div`
   display: flex;
   align-items: center;
-  height: 550px;
+  height: 600px;
   background: linear-gradient(
       90deg,
       rgba(0, 0, 0, 0.7) 0%,
@@ -46,7 +46,7 @@ export const Services: React.FC = () => {
     <Wrapper>
       <Container>
         <Main>
-          <Title>Here are the services that we offer</Title>
+          <Title>Услуги</Title>
           <Subtitle>
             We settle for nothing but the best and have won many awards
           </Subtitle>

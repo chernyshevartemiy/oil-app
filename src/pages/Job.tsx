@@ -6,7 +6,7 @@ import { Container } from '../components/Containter';
 const Wrapper = styled.div`
   display: flex;
   align-items: center;
-  height: 550px;
+  height: 600px;
   background: linear-gradient(
       64deg,
       rgba(0, 0, 0, 0.7) 0%,
@@ -40,12 +40,13 @@ const Subtitle = styled.div`
   font-size: 18px;
   max-width: 550px;
 `;
+
 export const Job: React.FC = () => {
   return (
     <Wrapper>
       <Container>
         <Main>
-          <Title>Our Projects</Title>
+          <Title>Проекты</Title>
           <Subtitle>
             We settle for nothing but the best and have won many awards
           </Subtitle>

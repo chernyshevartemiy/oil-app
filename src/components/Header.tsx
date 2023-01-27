@@ -7,11 +7,20 @@ import { Menu } from './Menu';
 import { listItems } from './List';
 import { CustomLink } from './CustomLink';
 import { Container } from './Containter';
-import { HeaderInfo } from './HeaderInfo';
-import { Link } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
 
-const Wrapper = styled.div`
+type IWrapper = {
+  bgColor: number;
+};
+
+const Wrapper = styled.div<IWrapper>`
   width: 100%;
+  position: sticky;
+  top: 0;
+  background-color: ${({ bgColor }) => (bgColor ? 'white' : 'transperent')};
+  box-shadow: ${({ bgColor }) =>
+    bgColor ? '3px 3px 3px rgba(0,0,0,0.12);' : 'none'};
+  z-index: 20;
 `;
 
 const HeaderEl = styled.header`
@@ -66,10 +75,18 @@ const List = styled.ul`
 
 export const Header: React.FC = () => {
   const [menu, setMenu] = React.useState<boolean>(false);
+  const [scrollY, setScrollY] = React.useState<number>(0);
+  const handleScroll = () => {
+    setScrollY(window.pageYOffset);
+  };
+  React.useEffect(() => {
+    document.addEventListener('scroll', handleScroll);
+    return window.removeEventListener('scroll', handleScroll);
+  }, [scrollY]);
+  const navigate = useNavigate();
   return (
-    <Wrapper>
+    <Wrapper bgColor={scrollY ? 1 : 0}>
       <Menu menu={menu} setMenu={setMenu} />
-      <HeaderInfo />
       <Container>
         <HeaderEl>
           <BurgerIcon onClick={() => setMenu(!menu)}>
@@ -86,17 +103,7 @@ export const Header: React.FC = () => {
               })}
             </List>
           </Navigation>
-          <Button>
-            <Link
-              style={{
-                textDecoration: 'none',
-                color: 'var(--text-color-white)',
-              }}
-              to='contact'
-            >
-              Связаться
-            </Link>
-          </Button>
+          <Button onClick={() => navigate('contact')}>Связаться</Button>
         </HeaderEl>
       </Container>
     </Wrapper>

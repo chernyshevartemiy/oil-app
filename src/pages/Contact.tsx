@@ -6,7 +6,7 @@ import { Container } from '../components/Containter';
 const Wrapper = styled.div`
   display: flex;
   align-items: center;
-  height: 550px;
+  height: 600px;
   background: linear-gradient(
       64deg,
       rgba(0, 0, 0, 0.7) 0%,
@@ -22,6 +22,7 @@ const Wrapper = styled.div`
 `;
 
 const Title = styled.div`
+  padding-bottom: 30px;
   max-width: 600px;
   font-size: 48px;
   font-weight: var(--fw-bold);
@@ -30,11 +31,19 @@ const Title = styled.div`
   }
 `;
 
+const Subtitle = styled.div`
+  font-size: 18px;
+  max-width: 550px;
+`;
+
 export const Contact: React.FC = () => {
   return (
     <Wrapper>
       <Container>
-        <Title>Let’s get business done your way</Title>
+        <Title>Контакты</Title>
+        <Subtitle>
+          Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+        </Subtitle>
       </Container>
     </Wrapper>
   );
