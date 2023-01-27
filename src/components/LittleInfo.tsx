@@ -7,6 +7,10 @@ import Vints from '../assets/images/vints.png';
 import Tube from '../assets/images/tube.png';
 
 const Wrapper = styled.div`
+  background-color: #fafbfc;
+`;
+
+const Main = styled.div`
   display: grid;
   grid-template-columns: repeat(1, 1fr);
   gap: 3rem;
@@ -19,12 +23,14 @@ const Wrapper = styled.div`
 
 export const LittleInfo: React.FC = () => {
   return (
-    <Container>
-      <Wrapper>
-        <LittleInfoItem img={Oil} />
-        <LittleInfoItem img={Vints} />
-        <LittleInfoItem img={Tube} />
-      </Wrapper>
-    </Container>
+    <Wrapper>
+      <Container>
+        <Main>
+          <LittleInfoItem img={Oil} />
+          <LittleInfoItem img={Vints} />
+          <LittleInfoItem img={Tube} />
+        </Main>
+      </Container>
+    </Wrapper>
   );
 };

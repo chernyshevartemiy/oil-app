@@ -17,7 +17,7 @@ const Wrapper = styled.div<IWrapper>`
   width: 100%;
   position: sticky;
   top: 0;
-  background-color: ${({ bgColor }) => (bgColor ? 'white' : 'transperent')};
+  background-color: ${({ bgColor }) => (bgColor ? 'white' : 'none')};
   box-shadow: ${({ bgColor }) =>
     bgColor ? '3px 3px 3px rgba(0,0,0,0.12);' : 'none'};
   z-index: 20;
@@ -82,7 +82,7 @@ export const Header: React.FC = () => {
   React.useEffect(() => {
     document.addEventListener('scroll', handleScroll);
     return window.removeEventListener('scroll', handleScroll);
-  }, [scrollY]);
+  }, []);
   const navigate = useNavigate();
   return (
     <Wrapper bgColor={scrollY ? 1 : 0}>
