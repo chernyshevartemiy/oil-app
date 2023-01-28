@@ -26,9 +26,9 @@ export const LittleInfo: React.FC = () => {
     <Wrapper>
       <Container>
         <Main>
-          <LittleInfoItem img={Oil} />
-          <LittleInfoItem img={Vints} />
-          <LittleInfoItem img={Tube} />
+          <LittleInfoItem delay='100' img={Oil} />
+          <LittleInfoItem delay='200' img={Vints} />
+          <LittleInfoItem delay='300' img={Tube} />
         </Main>
       </Container>
     </Wrapper>

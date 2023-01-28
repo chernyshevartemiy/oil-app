@@ -3,6 +3,8 @@ import styled from 'styled-components';
 import { Container } from '../components/Containter';
 import Serv from '../assets/images/Services.jpg';
 import { ServicesList } from '../components/ServicesList';
+import Aos from 'aos';
+import 'aos/dist/aos.css';
 
 const Wrapper = styled.div`
   display: flex;
@@ -43,10 +45,14 @@ const Subtitle = styled.div`
 `;
 
 export const Services: React.FC = () => {
+  React.useEffect(() => {
+    Aos.init({ duration: 1500, once: true });
+  }, []);
+
   return (
     <>
       <Wrapper>
-        <Container>
+        <Container data-aos='fade-right'>
           <Main>
             <Title>Услуги</Title>
             <Subtitle>

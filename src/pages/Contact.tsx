@@ -2,6 +2,8 @@ import React from 'react';
 import styled from 'styled-components';
 import Cont from '../assets/images/Contact.jpg';
 import { Container } from '../components/Containter';
+import Aos from 'aos';
+import 'aos/dist/aos.css';
 
 const Wrapper = styled.div`
   display: flex;
@@ -37,9 +39,12 @@ const Subtitle = styled.div`
 `;
 
 export const Contact: React.FC = () => {
+  React.useEffect(() => {
+    Aos.init({ duration: 1500, once: true });
+  }, []);
   return (
     <Wrapper>
-      <Container>
+      <Container data-aos='fade-right'>
         <Title>Контакты</Title>
         <Subtitle>
           Lorem, ipsum dolor sit amet consectetur adipisicing elit.

@@ -1,4 +1,7 @@
+import React from 'react';
 import styled from 'styled-components';
+import Aos from 'aos';
+import 'aos/dist/aos.css';
 
 const ListItem = styled.div`
   display: grid;
@@ -62,8 +65,11 @@ export const ServicesListItem: React.FC<IServicesListItem> = ({
   title,
   order,
 }) => {
+  React.useEffect(() => {
+    Aos.init({ duration: 1500, once: true });
+  }, []);
   return (
-    <ListItem>
+    <ListItem data-aos='fade-down'>
       <Img order={order} src={img} />
       <ItemInfo>
         <ItemTitle>{title}</ItemTitle>

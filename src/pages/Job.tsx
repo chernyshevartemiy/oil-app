@@ -2,6 +2,8 @@ import React from 'react';
 import styled from 'styled-components';
 import jobImg from '../assets/images/Job.jpg';
 import { Container } from '../components/Containter';
+import Aos from 'aos';
+import 'aos/dist/aos.css';
 
 const Wrapper = styled.div`
   display: flex;
@@ -42,9 +44,12 @@ const Subtitle = styled.div`
 `;
 
 export const Job: React.FC = () => {
+  React.useEffect(() => {
+    Aos.init({ duration: 1500, once: true });
+  }, []);
   return (
     <Wrapper>
-      <Container>
+      <Container data-aos='fade-right'>
         <Main>
           <Title>Проекты</Title>
           <Subtitle>

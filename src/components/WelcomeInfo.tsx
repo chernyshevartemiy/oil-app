@@ -1,6 +1,7 @@
 import styled from 'styled-components';
 import { Container } from './Containter';
 import Camera from '../assets/images/Camera.jpg';
+import React from 'react';
 
 const Wrapper = styled.div`
   display: grid;
@@ -63,7 +64,7 @@ const Info = styled.span`
 export const WelcomeInfo: React.FC = () => {
   return (
     <Container>
-      <Wrapper>
+      <Wrapper data-aos='fade-down'>
         <Main>
           <Subtitle>Welcome to the Pachin</Subtitle>
           <Title>

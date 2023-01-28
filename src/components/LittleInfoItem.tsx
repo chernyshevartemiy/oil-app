@@ -1,5 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
+import Aos from 'aos';
+import 'aos/dist/aos.css';
 
 const Item = styled.div`
   display: flex;
@@ -33,11 +35,15 @@ const Subtitle = styled.div`
 
 type ILittleInfoItem = {
   img: string;
+  delay: string;
 };
 
-export const LittleInfoItem: React.FC<ILittleInfoItem> = ({ img }) => {
+export const LittleInfoItem: React.FC<ILittleInfoItem> = ({ img, delay }) => {
+  React.useEffect(() => {
+    Aos.init({ duration: 2000, once: true });
+  });
   return (
-    <Item>
+    <Item data-aos='fade-right' data-aos-delay={delay}>
       <Icon src={img} />
       <ItemInfo>
         <Title>Buliding new homes</Title>
