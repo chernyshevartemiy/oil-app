@@ -50,8 +50,8 @@ const Button = styled.button`
   color: #ffffff;
   font-weight: var(--fw-medium);
   font-size: 13px;
+  padding: 0.8rem 1.3rem;
   background-color: var(--bg-color);
-  padding: 1rem 2rem;
   transition: all 0.3s;
   border-radius: var(--radius);
   text-transform: uppercase;
@@ -59,6 +59,10 @@ const Button = styled.button`
   cursor: pointer;
   &:hover {
     background-color: var(--bg-color-hover);
+  }
+
+  @media (min-width: 1024px) {
+    padding: 1rem 2rem;
   }
 `;
 
@@ -76,7 +80,7 @@ export const Slide: React.FC<ISlide> = ({ img }) => {
             Lorem ipsum dolor sit amet consectetur, adipisicing elit. Totam
             ipsum temporibus vel quasi? Voluptatum, distinctio!
           </Subtitle>
-          <Button>About Us</Button>
+          <Button>О компании</Button>
         </Content>
       </Container>
     </Wrapper>

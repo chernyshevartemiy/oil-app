@@ -2,6 +2,7 @@ import React from 'react';
 import styled from 'styled-components';
 import { Container } from '../components/Containter';
 import Serv from '../assets/images/Services.jpg';
+import { ServicesList } from '../components/ServicesList';
 
 const Wrapper = styled.div`
   display: flex;
@@ -43,15 +44,18 @@ const Subtitle = styled.div`
 
 export const Services: React.FC = () => {
   return (
-    <Wrapper>
-      <Container>
-        <Main>
-          <Title>Услуги</Title>
-          <Subtitle>
-            We settle for nothing but the best and have won many awards
-          </Subtitle>
-        </Main>
-      </Container>
-    </Wrapper>
+    <>
+      <Wrapper>
+        <Container>
+          <Main>
+            <Title>Услуги</Title>
+            <Subtitle>
+              We settle for nothing but the best and have won many awards
+            </Subtitle>
+          </Main>
+        </Container>
+      </Wrapper>
+      <ServicesList />
+    </>
   );
 };
