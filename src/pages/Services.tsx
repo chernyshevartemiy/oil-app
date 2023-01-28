@@ -9,7 +9,7 @@ import 'aos/dist/aos.css';
 const Wrapper = styled.div`
   display: flex;
   align-items: center;
-  height: 600px;
+  height: 400px;
   background: linear-gradient(
       90deg,
       rgba(0, 0, 0, 0.7) 0%,

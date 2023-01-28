@@ -9,7 +9,7 @@ type IWrapper = {
 const Wrapper = styled.div<IWrapper>`
   display: flex;
   align-items: center;
-  height: 650px;
+  height: 100vh;
   background: linear-gradient(
       90deg,
       rgba(0, 0, 0, 0.4) 30%,

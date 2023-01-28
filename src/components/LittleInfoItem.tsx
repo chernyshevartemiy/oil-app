@@ -40,7 +40,7 @@ type ILittleInfoItem = {
 
 export const LittleInfoItem: React.FC<ILittleInfoItem> = ({ img, delay }) => {
   React.useEffect(() => {
-    Aos.init({ duration: 2000, once: true });
+    Aos.init({ duration: 1500, once: true });
   });
   return (
     <Item data-aos='fade-right' data-aos-delay={delay}>

@@ -83,15 +83,15 @@ export const Footer = () => {
           <Main>
             <Logo src={icon} />
             <Subtitle>Адрес:</Subtitle>
-            <Text>426011, г. Ижевск, ул. Пушкинская, 277, БЦ "Парус"</Text>
+            <Text>426011, г. Ижевск, ул. Лермонтова, 277, ТЦ "Талисман"</Text>
             <SelectedText>Посмотреть на карте</SelectedText>
           </Main>
           <Contact>
             <Title>+7(831)-733-69-29 </Title>
             <Subtitle>Факс:</Subtitle>
-            <Text>+7 (3412) 908-627 (доб. 909)</Text>
+            <Text>+7(831)-733-69-29 (доб. 110)</Text>
             <Subtitle>E-mail:</Subtitle>
-            <MailText>info@udsoil.ru</MailText>
+            <MailText>info@specgasneftestroi.ru</MailText>
           </Contact>
           <Schedule>
             <Title>Режим работы</Title>
