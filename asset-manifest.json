@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/oil-app/static/css/main.1eef27fc.css",
-    "main.js": "/oil-app/static/js/main.ba0837c5.js",
+    "main.js": "/oil-app/static/js/main.a31422e7.js",
     "static/media/Job.jpg": "/oil-app/static/media/Job.e94836df16fe89705211.jpg",
     "static/media/Services.jpg": "/oil-app/static/media/Services.8dcf92c59ba4d436e700.jpg",
     "static/media/slideTwo.jpg": "/oil-app/static/media/slideTwo.336ee1fa862871ed11aa.jpg",
@@ -17,10 +17,10 @@
     "static/media/Icon.png": "/oil-app/static/media/Icon.fff8ed9260c6e48d1e3f.png",
     "index.html": "/oil-app/index.html",
     "main.1eef27fc.css.map": "/oil-app/static/css/main.1eef27fc.css.map",
-    "main.ba0837c5.js.map": "/oil-app/static/js/main.ba0837c5.js.map"
+    "main.a31422e7.js.map": "/oil-app/static/js/main.a31422e7.js.map"
   },
   "entrypoints": [
     "static/css/main.1eef27fc.css",
-    "static/js/main.ba0837c5.js"
+    "static/js/main.a31422e7.js"
   ]
 }
