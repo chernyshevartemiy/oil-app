@@ -32,6 +32,7 @@
 }
 
 body {
+  overflow: hidden;
   font-family: var(--inter-family);
   font-weight: var(--fw-normal);
   font-size: var(--fs-sm);
@@ -50,12 +51,4 @@ body {
 
 .swiper-pagination-progressbar-fill {
   border: 2px solid var(--bg-color);
-}
-
-.swiper {
-  position: absolute;
-}
-
-.swiper-slide {
-  position: absolute;
 }

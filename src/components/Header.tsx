@@ -73,8 +73,12 @@ const List = styled.ul`
   column-gap: 2rem;
 `;
 
-export const Header: React.FC = () => {
-  const [menu, setMenu] = React.useState<boolean>(false);
+type IHeader = {
+  menu: boolean;
+  setMenu: React.Dispatch<React.SetStateAction<boolean>>;
+};
+
+export const Header: React.FC<IHeader> = ({ menu, setMenu }) => {
   const [scrollY, setScrollY] = React.useState<number>(0);
   const handleScroll = () => {
     setScrollY(window.pageYOffset);
@@ -85,27 +89,28 @@ export const Header: React.FC = () => {
   }, []);
   const navigate = useNavigate();
   return (
-    <Wrapper bgColor={scrollY ? 1 : 0}>
-      <Menu menu={menu} setMenu={setMenu} />
-      <Container>
-        <HeaderEl>
-          <BurgerIcon onClick={() => setMenu(!menu)}>
-            <HiMenuAlt1 style={{ cursor: 'pointer' }} size={25} />
-            <BurgerText>Меню</BurgerText>
-          </BurgerIcon>
-          <Logo src={icon} />
-          <Navigation>
-            <List>
-              {listItems.map((item) => {
-                return (
-                  <CustomLink key={item.name} to={item.to} name={item.name} />
-                );
-              })}
-            </List>
-          </Navigation>
-          <Button onClick={() => navigate('contact')}>Связаться</Button>
-        </HeaderEl>
-      </Container>
-    </Wrapper>
+    <>
+      <Wrapper bgColor={scrollY ? 1 : 0}>
+        <Container>
+          <HeaderEl>
+            <BurgerIcon onClick={() => setMenu(!menu)}>
+              <HiMenuAlt1 style={{ cursor: 'pointer' }} size={25} />
+              <BurgerText>Меню</BurgerText>
+            </BurgerIcon>
+            <Logo src={icon} />
+            <Navigation>
+              <List>
+                {listItems.map((item) => {
+                  return (
+                    <CustomLink key={item.name} to={item.to} name={item.name} />
+                  );
+                })}
+              </List>
+            </Navigation>
+            <Button onClick={() => navigate('contact')}>Связаться</Button>
+          </HeaderEl>
+        </Container>
+      </Wrapper>
+    </>
   );
 };
