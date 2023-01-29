@@ -1,6 +1,7 @@
 import styled from 'styled-components';
 import { Container } from '../components/Containter';
 import errorImg from '../assets/images/Error.jpg';
+import React from 'react';
 
 const Wrapper = styled.div`
   display: flex;
@@ -40,7 +41,8 @@ const ErrorEl = styled.div`
   flex-direction: column;
 `;
 
-export const Error = () => {
+export const Error: React.FC = () => {
+  React.useEffect(() => {}, []);
   return (
     <Wrapper>
       <Container>

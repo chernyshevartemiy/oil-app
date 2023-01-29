@@ -47,6 +47,7 @@ const Subtitle = styled.div`
 export const Services: React.FC = () => {
   React.useEffect(() => {
     Aos.init({ duration: 1500, once: true });
+    window.scrollTo(0, 0);
   }, []);
 
   return (

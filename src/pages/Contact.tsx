@@ -41,6 +41,7 @@ const Subtitle = styled.div`
 
 export const Contact: React.FC = () => {
   React.useEffect(() => {
+    window.scrollTo(0, 0);
     Aos.init({ duration: 1500, once: true });
   }, []);
   return (
