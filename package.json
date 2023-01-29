@@ -1,4 +1,5 @@
 {
+  "homepage": "https://chernyshevartemiy.github.io/oil-app",
   "name": "build-app",
   "version": "0.1.0",
   "private": true,
@@ -16,6 +17,7 @@
     "@types/styled-components": "^5.1.26",
     "@types/swiper": "^6.0.0",
     "aos": "^2.3.4",
+    "gh-pages": "^5.0.0",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-icons": "^4.7.1",
@@ -27,6 +29,8 @@
     "web-vitals": "^2.1.4"
   },
   "scripts": {
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build",
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
