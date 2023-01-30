@@ -12,13 +12,6 @@ const Wrapper = styled.div`
 
 export const Layout: React.FC = () => {
   const [menu, setMenu] = React.useState<boolean>(false);
-  React.useEffect(() => {
-    if (menu) {
-      document.body.style.overflow = 'hidden';
-    } else {
-      document.body.style.overflow = 'visible';
-    }
-  }, [menu]);
   return (
     <Wrapper>
       <Menu menu={menu} setMenu={setMenu} />

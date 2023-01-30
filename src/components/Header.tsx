@@ -90,7 +90,7 @@ export const Header: React.FC<IHeader> = ({ menu, setMenu }) => {
   const navigate = useNavigate();
   return (
     <>
-      <Wrapper bgColor={scrollY ? 1 : 0}>
+      <Wrapper bgColor={scrollY ? scrollY : 0}>
         <Container>
           <HeaderEl>
             <BurgerIcon onClick={() => setMenu(!menu)}>

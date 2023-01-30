@@ -12,7 +12,6 @@ const List = styled.div`
   flex-direction: column;
 `;
 
-console.log(List);
 export const ServicesList: React.FC = () => {
   return (
     <Container>
