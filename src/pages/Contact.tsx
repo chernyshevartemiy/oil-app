@@ -5,6 +5,7 @@ import { Container } from '../components/Containter';
 import Aos from 'aos';
 import 'aos/dist/aos.css';
 import { ContactInfo } from '../components/ContactInfo';
+import { ContainerWrapper } from '../components/ContainerWrapper';
 
 const Wrapper = styled.div`
   display: flex;
@@ -21,7 +22,15 @@ const Wrapper = styled.div`
   background-repeat: no-repeat;
   font-family: var(--inter-family);
   border-top: 4px solid var(--bg-color);
+  flex-shrink: 0;
+  -webkit-box-flex: 1;
+  -ms-flex-positive: 1;
+  flex-grow: 1;
+
   color: var(--text-color-white);
+  @media (min-width: 1800px) {
+    height: 600px;
+  }
 `;
 
 const Title = styled.div`
@@ -45,7 +54,7 @@ export const Contact: React.FC = () => {
     Aos.init({ duration: 1500, once: true });
   }, []);
   return (
-    <>
+    <ContainerWrapper>
       <Wrapper>
         <Container data-aos='fade-right'>
           <Title>Контакты</Title>
@@ -55,6 +64,6 @@ export const Contact: React.FC = () => {
         </Container>
       </Wrapper>
       <ContactInfo />
-    </>
+    </ContainerWrapper>
   );
 };

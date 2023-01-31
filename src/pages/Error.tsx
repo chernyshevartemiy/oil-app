@@ -6,7 +6,7 @@ import React from 'react';
 const Wrapper = styled.div`
   display: flex;
   align-items: center;
-  height: 650px;
+  height: 400px;
   background: linear-gradient(
       90deg,
       rgba(0, 0, 0, 0.7) 0%,
@@ -19,6 +19,9 @@ const Wrapper = styled.div`
   font-family: var(--inter-family);
   border-top: 4px solid var(--bg-color);
   color: var(--text-color-white);
+  @media (min-width: 1800px) {
+    height: 600px;
+  }
 `;
 
 const Title = styled.div`

@@ -9,7 +9,7 @@ type IWrapper = {
 const Wrapper = styled.div<IWrapper>`
   display: flex;
   align-items: center;
-  height: 100vh;
+  height: 650px;
   background: linear-gradient(
       90deg,
       rgba(0, 0, 0, 0.4) 30%,
@@ -21,6 +21,9 @@ const Wrapper = styled.div<IWrapper>`
   background-size: cover;
   color: #ffffff;
   font-family: var(--inter-family);
+  @media (min-width: 1800px) {
+    height: 945px;
+  }
 `;
 
 const Content = styled.div`

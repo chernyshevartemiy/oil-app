@@ -4,6 +4,8 @@ import jobImg from '../assets/images/Job.jpg';
 import { Container } from '../components/Containter';
 import Aos from 'aos';
 import 'aos/dist/aos.css';
+import { ContainerWrapper } from '../components/ContainerWrapper';
+
 
 const Wrapper = styled.div`
   display: flex;
@@ -21,6 +23,9 @@ const Wrapper = styled.div`
   font-family: var(--inter-family);
   border-top: 4px solid var(--bg-color);
   color: var(--text-color-white);
+  @media (min-width: 1800px) {
+    height: 600px;
+  }
 `;
 
 const Main = styled.div`
@@ -43,21 +48,23 @@ const Subtitle = styled.div`
   max-width: 550px;
 `;
 
-export const Job: React.FC = () => {
+export const Team: React.FC = () => {
   React.useEffect(() => {
     Aos.init({ duration: 1500, once: true });
     window.scrollTo(0, 0);
   }, []);
   return (
-    <Wrapper>
-      <Container data-aos='fade-right'>
-        <Main>
-          <Title>Проекты</Title>
-          <Subtitle>
-            We settle for nothing but the best and have won many awards
-          </Subtitle>
-        </Main>
-      </Container>
-    </Wrapper>
+    <ContainerWrapper>
+      <Wrapper>
+        <Container data-aos='fade-right'>
+          <Main>
+            <Title>Команда</Title>
+            <Subtitle>
+              We settle for nothing but the best and have won many awards
+            </Subtitle>
+          </Main>
+        </Container>
+      </Wrapper>
+    </ContainerWrapper>
   );
 };

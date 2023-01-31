@@ -1,6 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
 import { Container } from '../components/Containter';
+import { ContainerWrapper } from '../components/ContainerWrapper';
 import Serv from '../assets/images/Services.jpg';
 import { ServicesList } from '../components/ServicesList';
 import Aos from 'aos';
@@ -22,6 +23,9 @@ const Wrapper = styled.div`
   font-family: var(--inter-family);
   border-top: 4px solid var(--bg-color);
   color: var(--text-color-white);
+  @media (min-width: 1800px) {
+    height: 600px;
+  }
 `;
 
 const Main = styled.div`
@@ -51,7 +55,7 @@ export const Services: React.FC = () => {
   }, []);
 
   return (
-    <>
+    <ContainerWrapper>
       <Wrapper>
         <Container data-aos='fade-right'>
           <Main>
@@ -63,6 +67,6 @@ export const Services: React.FC = () => {
         </Container>
       </Wrapper>
       <ServicesList />
-    </>
+    </ContainerWrapper>
   );
 };

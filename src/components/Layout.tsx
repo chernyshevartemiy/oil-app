@@ -8,6 +8,14 @@ import { Menu } from './Menu';
 
 const Wrapper = styled.div`
   width: 100%;
+  /* min-height: 100vh; */
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  min-height: 100vh;
+  -webkit-box-pack: justify;
 `;
 
 export const Layout: React.FC = () => {

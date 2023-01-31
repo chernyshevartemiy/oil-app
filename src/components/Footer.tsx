@@ -12,8 +12,8 @@ const Wrapper = styled.div`
   flex-direction: column;
   justify-content: space-between;
   width: 100%;
-  padding-top: 60px;
-  padding-bottom: 33px;
+  padding-top: 70px;
+  padding-bottom: 44px;
   @media (min-width: 1024px) {
     flex-direction: row;
   }

@@ -7,8 +7,8 @@ const ListEl = styled.ul`
 
 export const listItems = [
   { to: '/', name: 'Главная' },
-  { to: 'job', name: 'Деятельность' },
   { to: 'services', name: 'Услуги' },
+  { to: 'team', name: 'Команда' },
   { to: 'contact', name: 'Контакты' },
 ];
 
