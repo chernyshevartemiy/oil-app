@@ -75,7 +75,7 @@ const MailText = styled(SelectedText)`
   margin-top: 0px;
 `;
 
-export const Footer = () => {
+export const Footer: React.FC = () => {
   return (
     <FooterEl>
       <Container>

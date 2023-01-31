@@ -31,7 +31,8 @@
   --bg-color-hover: rgba(49, 50, 51, 1);
 }
 
-body {
+body,
+html {
   height: 100vh;
   font-family: var(--inter-family);
   font-weight: var(--fw-normal);

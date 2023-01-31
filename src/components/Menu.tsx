@@ -21,8 +21,9 @@ const Wrapper = styled.div<IStyledMenu>`
   top: 0;
   left: 0;
   z-index: 100;
+  overflow: hidden;
   width: 310px;
-  min-height: 100vh;
+  height: 100vh;
   padding: 26px 32px;
   transform: ${({ menu }) => (menu ? 'translate(0)' : 'translateX(-100%)')};
   transition: all 0.6s;
@@ -37,7 +38,7 @@ const Wrapper = styled.div<IStyledMenu>`
 
 const Blur = styled.div`
   width: 100vw;
-  min-height: 100vh;
+  height: 100vh;
   position: absolute;
 
   z-index: 99;

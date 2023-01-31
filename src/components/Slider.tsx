@@ -17,7 +17,7 @@ export const Slider: React.FC = () => {
         type: 'progressbar',
       }}
       autoplay={{
-        delay: 5500,
+        delay: 6500,
         disableOnInteraction: false,
       }}
       modules={[Autoplay, Pagination]}

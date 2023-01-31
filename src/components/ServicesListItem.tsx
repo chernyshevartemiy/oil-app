@@ -66,7 +66,7 @@ export const ServicesListItem: React.FC<IServicesListItem> = ({
   order,
 }) => {
   React.useEffect(() => {
-    Aos.init({ duration: 1500, once: true });
+    Aos.init({ duration: 2000, once: true });
   }, []);
   return (
     <ListItem data-aos='fade-down'>

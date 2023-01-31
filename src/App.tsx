@@ -6,6 +6,7 @@ import { Contact } from './pages/Contact';
 import { Layout } from './components/Layout';
 import { Error } from './pages/Error';
 import { YMaps } from '@pbe/react-yandex-maps';
+
 const App: React.FC = () => {
   return (
     <YMaps>
