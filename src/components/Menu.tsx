@@ -87,9 +87,13 @@ export const Menu: React.FC<IMenu> = ({ menu, setMenu }) => {
     if (menu && width <= 1024) {
       document.body.style.overflowY = 'hidden';
       document.documentElement.style.overflowY = 'hidden';
+      document.body.style.height = '100vh';
+      document.documentElement.style.height = '100vh';
     } else {
-      document.body.style.overflowY = 'visible';
-      document.documentElement.style.overflowY = 'visible';
+      document.body.style.height = '';
+      document.documentElement.style.height = '';
+      document.body.style.overflowY = '';
+      document.documentElement.style.overflowY = '';
     }
   }, [menu, width]);
   return (
