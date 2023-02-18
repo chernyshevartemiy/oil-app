@@ -5,7 +5,7 @@ import { Container } from '../components/Containter';
 import Aos from 'aos';
 import 'aos/dist/aos.css';
 import { ContainerWrapper } from '../components/ContainerWrapper';
-
+import { FullTeam } from '../components/FullTeam';
 
 const Wrapper = styled.div`
   display: flex;
@@ -65,6 +65,7 @@ export const Team: React.FC = () => {
           </Main>
         </Container>
       </Wrapper>
+      <FullTeam />
     </ContainerWrapper>
   );
 };
