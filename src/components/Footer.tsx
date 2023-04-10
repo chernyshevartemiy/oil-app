@@ -33,6 +33,7 @@ const Schedule = styled.div`
   display: flex;
   flex-direction: column;
 `;
+
 const Logo = styled.img`
   display: block;
   height: 50px;
